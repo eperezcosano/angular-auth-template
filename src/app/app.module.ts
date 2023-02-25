@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './component/main/main.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 
+import { HttpClientModule} from '@angular/common/http';
+import { OAuthModule } from 'angular-oauth2-oidc';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +17,9 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    OAuthModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

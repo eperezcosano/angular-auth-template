@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OauthService } from '../../service/oauth.service';
 
 @Component({
   selector: 'app-main',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class MainComponent {
 
+    constructor(private auth: OauthService) {
+    }
+
+    login() {
+        this.auth.login();
+    }
 }
